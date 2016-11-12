@@ -1,0 +1,101 @@
+﻿@model WsReceita.Models.Receita
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Receita</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NumReceita)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NumReceita)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Data)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Data)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Utilizada)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Utilizada)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Cancelada)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Cancelada)
+            </dd>
+        </dl>
+        
+        <hr />
+        <h5>Médico</h5>
+        <hr />
+        
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Medico.CRM)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Medico.CRM)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Medico.Nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Medico.Nome)
+            </dd>
+        </dl>
+        
+        <hr />
+        <h5>Paciente</h5>
+        <hr />
+        
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Paciente.CPF)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Paciente.CPF)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Paciente.Nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Paciente.Nome)
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
