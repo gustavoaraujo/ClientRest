@@ -10,7 +10,7 @@ namespace WsReceita.Models
 {
     public class Paciente
     {
-        public string CPF { get; set; }
+        public string Cpf { get; set; }
         public string Nome { get; set; }
         public List<Receita> Receitas { get; set; }
     }

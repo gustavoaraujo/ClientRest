@@ -85,8 +85,8 @@ namespace ClientRest.Controllers
 
         public ActionResult CriarReceita()
         {
-            receita.CPF = receita.Paciente.CPF;
-            receita.CRM = receita.Medico.CRM;
+            receita.Cpf = receita.Paciente.Cpf;
+            receita.Crm = receita.Medico.Crm;
             receita.Medico.Usuario = new Usuario()
             {
                 Login = string.Format("{0}{1}{2}{3}{4}{5}", 
