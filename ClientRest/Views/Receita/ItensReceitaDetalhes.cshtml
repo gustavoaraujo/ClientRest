@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WsReceita.Models.Item>
+
+<p>
+    @Html.ActionLink("Voltar", "Details")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RegAnvisa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instrucao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Uso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContraIndicacao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegAnvisa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Instrucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContraIndicacao)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

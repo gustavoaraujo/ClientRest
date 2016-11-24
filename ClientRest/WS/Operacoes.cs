@@ -13,7 +13,7 @@ namespace ClientRest.WS
         private RestClient restClient;
         public Operacoes()
         {
-            restClient = new RestClient("http://localhost:4676");
+            restClient = new RestClient("http://wsreceita.gear.host");
         }
 
         public string CancelarReceitaMedica(NumeroReceita numeroReceita)

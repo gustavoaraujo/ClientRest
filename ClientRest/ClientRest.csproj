@@ -180,6 +180,7 @@
     <Content Include="Views\Receita\Procura.cshtml" />
     <Content Include="Views\Receita\ItensReceita.cshtml" />
     <Content Include="Views\Receita\CriarItem.cshtml" />
+    <Content Include="Views\Receita\ItensReceitaDetalhes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

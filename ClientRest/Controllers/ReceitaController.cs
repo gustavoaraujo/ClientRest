@@ -38,10 +38,7 @@ namespace ClientRest.Controllers
 
         public ActionResult Details(Receita r)
         {
-            if (receita.NumReceita == r.NumReceita)
-                r = receita;
-
-            return View(r);
+            return View(receita);
         }
 
         public ActionResult Procura()
@@ -67,6 +64,11 @@ namespace ClientRest.Controllers
             if (r.Medico != null && r.Paciente != null)
                 receita = r;
                 
+            return View(receita.ItensReceita);
+        }
+
+        public ActionResult ItensReceitaDetalhes(Receita r)
+        {
             return View(receita.ItensReceita);
         }
 
